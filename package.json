@@ -1,0 +1,19 @@
+{
+  "name": "ajax-jquery",
+  "version": "1.0.0",
+  "description": "ajax-jquery",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/.bin/http-server --port 8080"
+  },
+  "keywords": [
+    "ajax",
+    "jquery"
+  ],
+  "author": "poyonkie",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}
