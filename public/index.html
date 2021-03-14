@@ -4,23 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajax - jQuery</title>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Ajax - Raw</title>
 </head>
 <body>
 
     <div id="demo">
-        <h2>AJAX - jQuery</h2>
-        <button type="button" id="btn-load">Load Content</button>
+        <h2>AJAX - Raw</h2>
+        <button type="button" onclick="loadInfo();" id="btn-load">Load Content</button>
     </div>
     
     <script>
-        $("#btn-load").click(function(){
-            $.ajax({url: "assets/docs/demo_test.txt", success: function(result){
-                $("#demo").html(result);
-            }});
-        });
+        function loadInfo(params) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("demo").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "assets/docs/demo_test.txt", true);
+            xhttp.send();
+        }
     </script>
 </body>
 </html>

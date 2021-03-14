@@ -1,15 +1,14 @@
 {
-  "name": "ajax-jquery",
+  "name": "ajax-raw",
   "version": "1.0.0",
-  "description": "ajax-jquery",
+  "description": "ajax",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node_modules/.bin/http-server --port 8080"
   },
   "keywords": [
-    "ajax",
-    "jquery"
+    "ajax"
   ],
   "author": "poyonkie",
   "license": "ISC",
